@@ -41,7 +41,6 @@
     min-height: 100vh;
   }
 
-  /* ── Header ── */
   header {
     padding: 28px 40px 20px;
     display: flex;
@@ -66,7 +65,6 @@
     font-family: 'DM Mono', monospace;
   }
 
-  /* ── User tabs ── */
   .tabs {
     display: flex;
     gap: 6px;
@@ -110,7 +108,6 @@
   .tab-btn[data-user="financeiro"]   .dot { background: var(--accent-financeiro); }
   .tab-btn.active .dot { background: rgba(255,255,255,0.7); }
 
-  /* ── Main content ── */
   main {
     padding: 36px 40px 60px;
   }
@@ -122,8 +119,6 @@
     from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  /* ── Section label ── */
   .section-label {
     display: inline-flex;
     align-items: center;
@@ -145,7 +140,6 @@
     letter-spacing: -0.5px;
   }
 
-  /* ── Sitemap tree ── */
   .tree-root {
     display: flex;
     flex-direction: column;
@@ -153,7 +147,6 @@
     gap: 0;
   }
 
-  /* Entry nodes */
   .entry-nodes {
     display: flex;
     flex-direction: column;
@@ -161,7 +154,6 @@
     gap: 0;
   }
 
-  /* Node styles */
   .node {
     background: var(--node-bg);
     border: 1.5px solid var(--node-border);
@@ -185,7 +177,6 @@
     border-color: transparent;
   }
 
-  /* Connector lines */
   .v-line {
     width: 1.5px;
     background: var(--connector);
@@ -196,22 +187,18 @@
     background: var(--connector);
   }
 
-  /* ── Grid-based layout ── */
   .level {
     display: flex;
     align-items: flex-start;
     gap: 0;
     position: relative;
   }
-
-  /* ── Column groups ── */
   .col-group {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /* Horizontal branch line connecting children */
   .branch {
     display: flex;
     align-items: flex-start;
@@ -225,10 +212,9 @@
     align-items: center;
   }
 
-  /* Leaf node (no children) */
+  
   .leaf { }
 
-  /* ── Main columns layout ── */
   .columns {
     display: flex;
     gap: 16px;
@@ -244,7 +230,7 @@
     min-width: 160px;
   }
 
-  /* ── Module card (parent with children) ── */
+  
   .module-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -293,7 +279,7 @@
     background: #eeede8;
   }
 
-  /* ── Top section: Tela Inicial → Login → Perfil ── */
+
   .top-flow {
     display: flex;
     flex-direction: column;
@@ -301,7 +287,7 @@
     margin-bottom: 32px;
   }
 
-  /* ── Divider ── */
+
   .divider {
     width: 100%;
     height: 1px;
@@ -309,7 +295,7 @@
     margin: 24px 0;
   }
 
-  /* ── Description tag ── */
+
   .desc-bar {
     font-size: 12px;
     color: var(--text-muted);
@@ -327,7 +313,7 @@
     background: var(--border);
   }
 
-  /* Color helpers per user */
+ 
   .admin-color        { background: var(--accent-admin); }
   .profissional-color { background: var(--accent-profissional); }
   .paciente-color     { background: var(--accent-paciente); }
@@ -340,7 +326,7 @@
   .responsavel-light-bg  { background: var(--accent-responsavel-light); border-color: var(--accent-responsavel) !important; }
   .financeiro-light-bg   { background: var(--accent-financeiro-light); border-color: var(--accent-financeiro) !important; }
 
-  /* Center node */
+
   .center-node {
     padding: 10px 24px;
     border-radius: var(--radius);
@@ -351,7 +337,6 @@
     box-shadow: var(--shadow);
   }
 
-  /* Responsive */
   @media (max-width: 768px) {
     header { flex-direction: column; gap: 14px; align-items: flex-start; padding: 20px; }
     main { padding: 24px 16px 60px; }
@@ -390,20 +375,16 @@
   <!-- ═══════════════════════ ADMIN ═══════════════════════ -->
   <div class="user-panel active" id="panel-admin">
 
-    <!-- Top flow: Tela Inicial → Login → Perfil -->
     <div class="top-flow">
       <div class="node accent admin-color" style="font-size:14px;padding:10px 28px;">Tela Inicial</div>
       <div class="v-line" style="height:28px;"></div>
       <div class="node admin-light-bg" style="font-size:13px;color:var(--accent-admin);">Escolher Perfil (admin)</div>
       <div class="v-line" style="height:28px;"></div>
-      <!-- Central node -->
       <div class="center-node admin-color">Painel de Gestão</div>
     </div>
 
-    <!-- Modules grid -->
     <div class="columns">
 
-      <!-- Gestão de Agendas -->
       <div class="module-card">
         <div class="module-title admin-color">Gestão de Agendas</div>
         <div class="children">
@@ -412,7 +393,6 @@
         </div>
       </div>
 
-      <!-- Controle de Acesso -->
       <div class="module-card">
         <div class="module-title admin-color">Controle de Acesso</div>
         <div class="children">
@@ -422,7 +402,6 @@
         </div>
       </div>
 
-      <!-- Financeiro -->
       <div class="module-card">
         <div class="module-title admin-color">Financeiro</div>
         <div class="children">
@@ -432,7 +411,6 @@
         </div>
       </div>
 
-      <!-- Orientação Parental -->
       <div class="module-card">
         <div class="module-title admin-color">Orientação Parental</div>
         <div class="children">
@@ -443,17 +421,14 @@
         </div>
       </div>
 
-      <!-- Prontuário -->
       <div class="module-card">
         <div class="module-title admin-color">Prontuário</div>
         <div class="children">
           <div class="child-node">Atividades Terapêuticas</div>
-          <div class="child-node">Controle de Acesso e Edição</div>
           <div class="child-node">Manter Prontuário Digital</div>
         </div>
       </div>
 
-      <!-- Atendimento -->
       <div class="module-card">
         <div class="module-title admin-color">Atendimento</div>
         <div class="children">
@@ -461,8 +436,6 @@
           <div class="child-node">Atendimento Virtual</div>
         </div>
       </div>
-
-      <!-- Sistema e Configuração -->
       <div class="module-card">
         <div class="module-title admin-color">Sistema e Configuração</div>
         <div class="children">
@@ -532,7 +505,6 @@
         <div class="module-title profissional-color">Prontuário</div>
         <div class="children">
           <div class="child-node">Atividades Terapêuticas</div>
-          <div class="child-node">Controle de Acesso e Edição</div>
           <div class="child-node">Manter Prontuário Digital</div>
         </div>
       </div>
